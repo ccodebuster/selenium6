@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 
 public class NopCommerce extends BaseTest{
 
-  String baseUrl = "https://demo.nopcommerce.com/login?returnUrl=%2F";
+  String baseUrl = "https://demo.nopcommerce.com/";
     @Before
     public void setUp() throws InterruptedException {
         openBrowser(baseUrl);
@@ -21,12 +21,13 @@ public class NopCommerce extends BaseTest{
 
      /* //By linkText
      WebElement myAccountLink =  driver.findElement(By.linkText("My Account"));
-     myAccountLink.click();
+     myAccountLink.click();*/
 
       //By linkText
-      WebElement loginLink =  driver.findElement(By.linkText("Login"));
-      myAccountLink.click();
-
+      WebElement loginLink =  driver.findElement(By.linkText("Log in"));
+      loginLink.click();
+      
+      Thread.sleep(2000);
       //By ID
       WebElement emailField= driver.findElement(By.id("input-email"));
       emailField.sendKeys("codebuster@gmail.com");
@@ -37,11 +38,11 @@ public class NopCommerce extends BaseTest{
 
       //By LinkText
       WebElement loginButton = driver.findElement(By.linkText("Log in"));
-      loginButton.click();*/
+      loginButton.click();
 
 
 
-      //By ID
+     /* //By ID
       WebElement emailField= driver.findElement(By.id("Email"));
       emailField.sendKeys("codebuster@gmail.com");
 
@@ -51,14 +52,15 @@ public class NopCommerce extends BaseTest{
 
       //By LinkText
      WebElement loginButton = driver.findElement(By.linkText("Log in"));
-     loginButton.click();
+     loginButton.click();*/
 
     }
 
 
     @After
     public void tearDown(){
-        //closeBrowser();
+
+      //closeBrowser();
     }
 
 }

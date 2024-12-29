@@ -10,6 +10,7 @@ public class BaseTest {
 
     public void openBrowser(String baseUrl){
 
+      //  driver = new EdgeDriver();
         driver = new ChromeDriver();
         driver.get(baseUrl);
         driver.manage().window().maximize();
